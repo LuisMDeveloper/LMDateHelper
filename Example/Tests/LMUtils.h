@@ -4,7 +4,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <LMDateHelper/LMDateType.h>
 
 @interface LMUtils : NSObject
+
 + (NSDate *)getDateFromString:(NSString *)dateString withFormat:(NSString *)format;
+
++ (void)testNSDateCreationWith:(NSString *)dateString format:(NSString *)format dateType:(LMDateType)dateType;
 @end

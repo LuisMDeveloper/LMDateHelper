@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "LMDateType.h"
 #import "NSDate+fromString.h"
 
 FOUNDATION_EXPORT double LMDateHelperVersionNumber;
