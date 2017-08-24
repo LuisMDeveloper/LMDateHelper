@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LMDateHelper_Example' do
+  pod 'LMDateHelper', :path => '../'
+
+  target 'LMDateHelper_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+  end
+end
