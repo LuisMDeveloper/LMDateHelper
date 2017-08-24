@@ -1,6 +1,6 @@
 # LMDateHelper
 
-[![CI Status](http://img.shields.io/travis/Luis Manuel Ramirez Vargas/LMDateHelper.svg?style=flat)](https://travis-ci.org/Luis Manuel Ramirez Vargas/LMDateHelper)
+[![CI Status](http://img.shields.io/travis/LuisMDeveloper/LMDateHelper.svg?style=flat)](https://travis-ci.org/LuisMDeveloperLMDateHelper)
 [![Version](https://img.shields.io/cocoapods/v/LMDateHelper.svg?style=flat)](http://cocoapods.org/pods/LMDateHelper)
 [![License](https://img.shields.io/cocoapods/l/LMDateHelper.svg?style=flat)](http://cocoapods.org/pods/LMDateHelper)
 [![Platform](https://img.shields.io/cocoapods/p/LMDateHelper.svg?style=flat)](http://cocoapods.org/pods/LMDateHelper)
