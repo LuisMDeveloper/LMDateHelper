@@ -1,0 +1,6 @@
+framework module Pods_LMDateHelper_Example {
+  umbrella header "Pods-LMDateHelper_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

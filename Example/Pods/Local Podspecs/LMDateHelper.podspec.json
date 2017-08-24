@@ -1,0 +1,22 @@
+{
+  "name": "LMDateHelper",
+  "version": "0.1.0",
+  "summary": "A short description of LMDateHelper.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Luis Manuel Ramirez Vargas/LMDateHelper",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Luis Manuel Ramirez Vargas": "luis.manuel.ramirez.91@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Luis Manuel Ramirez Vargas/LMDateHelper.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LMDateHelper/Classes/**/*"
+}

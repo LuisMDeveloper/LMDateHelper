@@ -1,0 +1,6 @@
+framework module LMDateHelper {
+  umbrella header "LMDateHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}
