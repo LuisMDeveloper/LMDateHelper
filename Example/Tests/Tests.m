@@ -16,16 +16,15 @@ SPEC_BEGIN(NSDateExtensionSpec)
             it(@"returns NSDate", ^{
                 NSString *dateString = @"1991-12-25";
 
-                id date = [NSDate fromString:dateString format: ISODate];
+                id date = [NSDate fromString:dateString format:ISODate];
                 [[date should] beKindOfClass:[NSDate class]];
             });
-
 
             it(@"string with format ISO Year", ^{
                 NSString *dateString = @"1991";
                 NSString *format = @"yyyy";
 
-                NSDate *date = [NSDate fromString:dateString format: ISOYear];
+                NSDate *date = [NSDate fromString:dateString format:ISOYear];
                 NSDate *expectedDate = [LMUtils getDateFromString:dateString withFormat:format];
 
                 [[date should] equal:expectedDate];
@@ -35,7 +34,7 @@ SPEC_BEGIN(NSDateExtensionSpec)
                 NSString *dateString = @"1991-12";
                 NSString *format = @"yyyy-MM";
 
-                NSDate *date = [NSDate fromString:dateString format: ISOYearMonth];
+                NSDate *date = [NSDate fromString:dateString format:ISOYearMonth];
                 NSDate *expectedDate = [LMUtils getDateFromString:dateString withFormat:format];
 
                 [[date should] equal:expectedDate];
@@ -45,7 +44,7 @@ SPEC_BEGIN(NSDateExtensionSpec)
                 NSString *dateString = @"1991-12-25";
                 NSString *format = @"yyyy-MM-dd";
 
-                NSDate *date = [NSDate fromString:dateString format: ISODate];
+                NSDate *date = [NSDate fromString:dateString format:ISODate];
                 NSDate *expectedDate = [LMUtils getDateFromString:dateString withFormat:format];
 
                 [[date should] equal:expectedDate];
@@ -55,7 +54,7 @@ SPEC_BEGIN(NSDateExtensionSpec)
                 NSString *dateString = @"1991-07-16T19:20+01:00";
                 NSString *format = @"yyyy-MM-dd'T'HH:mmZ";
 
-                NSDate *date = [NSDate fromString:dateString format: ISODateTime];
+                NSDate *date = [NSDate fromString:dateString format:ISODateTime];
                 NSDate *expectedDate = [LMUtils getDateFromString:dateString withFormat:format];
 
                 [[date should] equal:expectedDate];
@@ -65,7 +64,7 @@ SPEC_BEGIN(NSDateExtensionSpec)
                 NSString *dateString = @"1991-07-16T19:20:30+01:00";
                 NSString *format = @"yyyy-MM-dd'T'HH:mm:ssZ";
 
-                NSDate *date = [NSDate fromString:dateString format: ISODateTimeSec];
+                NSDate *date = [NSDate fromString:dateString format:ISODateTimeSec];
                 NSDate *expectedDate = [LMUtils getDateFromString:dateString withFormat:format];
 
                 [[date should] equal:expectedDate];
@@ -75,10 +74,47 @@ SPEC_BEGIN(NSDateExtensionSpec)
                 NSString *dateString = @"1991-07-16T19:20:30.45+01:00";
                 NSString *format = @"yyyy-MM-dd'T'HH:mm:ss.SSSZ";
 
-                NSDate *date = [NSDate fromString:dateString format: ISODateTimeMilliSec];
+                NSDate *date = [NSDate fromString:dateString format:ISODateTimeMilliSec];
                 NSDate *expectedDate = [LMUtils getDateFromString:dateString withFormat:format];
 
                 [[date should] equal:expectedDate];
+            });
+
+        });
+
+        context(@"to string", ^{
+
+            it(@"return ISO Year", ^{
+                NSString *expectedDateString = @"1991";
+                NSString *format = @"yyyy";
+
+                NSDate *date = [LMUtils getDateFromString:expectedDateString withFormat:format];
+
+                NSString *dateString = [date toStringWithFormat:ISOYear];
+
+                [[dateString should] equal:expectedDateString];
+            });
+
+            it(@"returns ISO YearMonth", ^{
+                NSString *expectedDateString = @"1991-12";
+                NSString *format = @"yyyy-MM";
+
+                NSDate *date = [LMUtils getDateFromString:expectedDateString withFormat:format];
+
+                NSString *dateString = [date toStringWithFormat:ISOYearMonth];
+
+                [[dateString should] equal:expectedDateString];
+            });
+
+            it(@"returns ISO Date", ^{
+                NSString *expectedDateString = @"1991-12-25";
+                NSString *format = @"yyyy-MM-dd";
+
+                NSDate *date = [LMUtils getDateFromString:expectedDateString withFormat:format];
+
+                NSString *dateString = [date toStringWithFormat:ISODate];
+
+                [[dateString should] equal:expectedDateString];
             });
 
         });

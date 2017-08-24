@@ -11,4 +11,6 @@
 
 + (NSDate *)fromString:(NSString *)string format:(LMDateType)format;
 
+- (NSString *)toStringWithFormat:(LMDateType)format;
+
 @end

@@ -21,6 +21,14 @@ LMDateType defaultFormat = ISODate;
     return [dateFormatter dateFromString:string];
 }
 
+- (NSString *)toStringWithFormat:(LMDateType)format {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    NSString *stringFormat = [NSDate getStringFormat:format];
+    [dateFormatter setDateFormat:stringFormat];
+
+    return [dateFormatter stringFromDate:self];
+}
+
 + (NSString *)getStringFormat:(LMDateType)format {
     switch (format) {
         case ISOYear:
