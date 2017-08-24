@@ -117,17 +117,6 @@ SPEC_BEGIN(NSDateExtensionSpec)
                 [[dateString should] equal:expectedDateString];
             });
 
-            it(@"returns ISO DateTime", ^{
-                NSString *expectedDateString = @"1991-07-16T19:20+01:00";
-                NSString *format = @"yyyy-MM-dd'T'HH:mmZ";
-
-                NSDate *date = [LMUtils getDateFromString:expectedDateString withFormat:format];
-
-                NSString *dateString = [date toStringWithFormat:ISODateTime];
-
-                [[dateString should] equal:expectedDateString];
-            });
-
         });
     });
 SPEC_END
