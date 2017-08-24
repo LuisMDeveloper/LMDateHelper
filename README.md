@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/LMDateHelper.svg?style=flat)](http://cocoapods.org/pods/LMDateHelper)
 [![Platform](https://img.shields.io/cocoapods/p/LMDateHelper.svg?style=flat)](http://cocoapods.org/pods/LMDateHelper)
 
+**Warning:** This is my first pod LMDateHelper (Work In Progress) only for learning purposes for now.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
