@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-My first pod LMDateHelper (Work In Progress) only for learning purposes
+My first pod LMDateHelper (Work In Progress) only for learning purposes, testing TravisCI
                        DESC
 
   s.homepage         = 'https://github.com/LuisMDeveloper/LMDateHelper'
