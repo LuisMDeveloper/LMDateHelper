@@ -6,40 +6,31 @@
 //  Copyright (c) 2017 Luis Manuel Ramirez Vargas. All rights reserved.
 //
 
-// https://github.com/kiwi-bdd/Kiwi
+#import <LMDateHelper/NSDate+fromString.h>
+#import "LMUtils.h"
 
-SPEC_BEGIN(InitialTests)
+SPEC_BEGIN(NSDateExtensionSpec)
+    describe(@"NSDateExtension", ^{
+        context(@"created from", ^{
+            it(@"returns NSDate", ^{
+                NSString *dateString = @"1995-12-25";
 
-describe(@"My initial tests", ^{
+                id date = [NSDate fromString:dateString];
+                [[date should] beKindOfClass:[NSDate class]];
+            });
 
-  context(@"will fail", ^{
+            it(@"string with format ISO", ^{
+                NSString *dateString = @"1995-12-25";
+                NSString *format = @"yyyy-MM-dd";
 
-      it(@"can do maths", ^{
-          [[@1 should] equal:@2];
-      });
+                NSDate *date = [NSDate fromString:dateString];
+                NSDate *expectedDate = [LMUtils getDateFromString:dateString withFormat:format];
 
-      it(@"can read", ^{
-          [[@"number" should] equal:@"string"];
-      });
-    
-      it(@"will wait and fail", ^{
-          NSObject *object = [[NSObject alloc] init];
-          [[expectFutureValue(object) shouldEventually] receive:@selector(autoContentAccessingProxy)];
-      });
-  });
-
-  context(@"will pass", ^{
-    
-      it(@"can do maths", ^{
-        [[@1 should] beLessThan:@23];
-      });
-    
-      it(@"can read", ^{
-          [[@"team" shouldNot] containString:@"I"];
-      });  
-  });
-  
-});
-
+                [[date should] equal:expectedDate];
+            });
+        });
+    });
 SPEC_END
+
+
 
